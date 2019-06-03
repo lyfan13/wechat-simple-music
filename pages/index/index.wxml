@@ -1,0 +1,57 @@
+<view>
+	<view class="topWrap {{_hover?'curhover':''}}" bindtap='changeHover'>
+		<view class="wordWrap" bindtap='getWord'>
+			<text class="dot">“</text>
+			<text class="content">{{nowSong.comment?nowSong.comment:'人最强大的武器，是习惯和信赖'}}</text>
+			<text class="dot">”</text>
+		</view>
+	</view>
+	<view class="geliwrap" />
+	<player
+	 id="player"
+	 bindmyevent='stopMusic'
+	 nowSong="{{nowSong}}"
+	 playing="{{playing}}"
+	 lyric="{{nowSong.lyric}}"
+	 marginTop="{{marginTop}}"
+	/>
+	<view class="list">
+		<view class="listWrap">
+			<view class="listContent">
+				<!-- 左边封面 -->
+				<scroll-view scroll-y class="coverScroll">
+					<block wx:for="{{musicList}}" wx:key="index">
+						<view class="coverWrap">
+							<view class="singelCover {{_album===item.id?'curlist':''}}" data-id="{{item.id}}" bindtap="changSongList">
+								<image src="{{item.picUrl}}" mode="widthFix" class="coverImg" />
+								<!-- <text class="coverItem">{{index}}</text> -->
+								<text class="coverItem">{{item.name}}</text>
+							</view>
+						</view>
+					</block>
+				</scroll-view>
+				<!-- 右边详细歌曲 -->
+				<!-- <view class="itemWrap"> -->
+				<scroll-view scroll-y class="detailScroll">
+					<block wx:for="{{songList}}" wx:key="index">
+						<view
+						 class="song {{_num===item.id?'active':''}}"
+						 bindtap="playMusic"
+						 data-hi="{{item}}"
+						 data-index="{{index}}"
+						>
+							<text class="songName">{{item.name}}</text>
+							<text class="songArtist">-{{item.ar[0].name}}</text>
+						</view>
+						<!-- <view class="song">
+							<text class="songName">我曾</text>
+							<text class="songArtist">隔壁老吴</text>
+						</view> -->
+					</block>
+				</scroll-view>
+				<!-- </view> -->
+			</view>
+		</view>
+	</view>
+</view>
+

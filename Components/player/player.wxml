@@ -1,0 +1,36 @@
+<view class="imgWrap">
+	<view class="tniWrap">
+		<view class="artWrap">
+			<text class="title">{{nowSong.name?nowSong.name:"life is wonderful"}}</text>
+			<text class="name">{{nowSong.artist?nowSong.artist:"behappy"}}</text>
+		</view>
+	</view>
+	<view class="lrWrap">
+		<view class="lmiddle" />
+		<image class='{{playing?"smove":"false"}}' mode="widthFix" src="../../img/left.png" />
+		<view class="smiddle" />
+		<image class='{{playing?"smove":"false"}}' mode="widthFix" src="../../img/right.png" />
+		<view class="rmiddle" />
+	</view>
+	<view class="lyricWrap">
+		<scroll-view scroll-y="true" scroll-top="{{marginTop}}" class="sclyr">
+			<view wx:for="{{lyric}}" wx:key="index" style="display:flex;flex-direction:column;">
+				<!-- 歌词显示 -->
+				<text class="lyric">{{item.c}}</text>
+			</view>
+		</scroll-view>
+	</view>
+	<image class="img" src="../../img/kadai2.png" mode="widthFix" />
+	<view class="control">
+		<view class="geli" />
+		<image
+		 src="../../img/play.png"
+		 bindtap="onTap"
+		 style="width:25%;"
+		 mode="widthFix"
+		 class='{{playing?"smove":"false"}}'
+		/>
+		<view class="geli" />
+	</view>
+</view>
+

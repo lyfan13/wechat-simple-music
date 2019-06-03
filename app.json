@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "Components/player/player"
+  ],
+  "requiredBackgroundModes": ["audio"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "Listen",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#CC3333"
+  },
+  "sitemapLocation": "sitemap.json"
+}

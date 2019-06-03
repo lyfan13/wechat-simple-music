@@ -1,0 +1,147 @@
+/* Components/player/player.wxss */
+.imgWrap{
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 30rpx;
+}
+
+.img{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: -1;
+}
+.tniWrap{
+  height: 149rpx;
+}
+.name{
+  font-size: 25rpx;
+  margin-top: 5rpx;
+}
+.artWrap{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  position: absolute;
+  top:43rpx;
+  left:110rpx;
+}
+.lrWrap{
+  display: flex;
+  flex-direction: row;
+  height: 113rpx;
+  /* border: 1px solid red; */
+}
+.smiddle{
+  width:1199rpx;
+  height:100%;
+}
+.lmiddle{
+  width: 900rpx;
+  height: 100%;
+}
+.rmiddle{
+  width: 900rpx;
+  height: 100%;
+}
+.lyric{
+  font-size: 27rpx;
+  margin-left: 150rpx;
+  color: #000;
+  display: inline-block;
+  height:60rpx;
+}
+.lyricWrap{
+  margin-bottom:10rpx;
+  height: 70rpx;
+  /* overflow: hidden; */
+}
+.sclyr{
+  height:50rpx;
+  padding-top: 10rpx;
+}
+.svheight{
+  height: 800rpx;
+}
+.control{
+  height: 30rpx;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: row;
+}
+.geli{
+  width:700rpx;
+}
+.smove{
+  -webkit-animation-name: myfirst;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/*  */
+.page-section-spacing{
+  margin-top: 60rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+.demo-text-1 {
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-color:#1AAD19;
+  color:#FFFFFF;
+  font-size:36rpx;
+  }
+.demo-text-2 {
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-color:rgb(231, 250, 228);
+  color:#FFFFFF;
+  font-size:36rpx;
+  }
+.demo-text-3 {
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  background-color:rgb(41, 141, 223);
+  color:#FFFFFF;
+  font-size:36rpx;
+  }
+  
+
+
+/*  */
+
+
+@keyframes myfirst {
+  /*开始转的角度*/
+  from {
+    transform: rotate(0deg);
+  }/*结束的角度*/
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*兼容ios*/
+@-webkit-keyframes myfirst {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
