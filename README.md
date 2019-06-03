@@ -5,4 +5,4 @@
 
 效果图：  
 
-！![wechat](http://vue-upyun.test.upcdn.net/wechat/wcmusic.gif)
+![wechat](http://vue-upyun.test.upcdn.net/wechat/wcmusic.gif)
